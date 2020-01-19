@@ -23,6 +23,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="显示透明主题的Activity"/>
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入"
+        android:imeOptions="flagNoExtractUi"
+        android:layout_marginTop="10dp"/>
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
