@@ -1,8 +1,6 @@
 package com.test.launchmode
 
 import android.app.Activity
-import android.app.ActivityManager
-import android.content.Context
 import android.os.Bundle
 
 /**
@@ -12,14 +10,8 @@ import android.os.Bundle
  */
 abstract class BaseActivity : Activity() {
 
-    private var manager : ActivityManager? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        manager = getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
-        var task = ActivityManager.RunningTaskInfo()
-
         ActivityStackManager.instance.pushActivity(this)
         printActivityStack()
     }

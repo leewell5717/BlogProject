@@ -9,12 +9,16 @@ import java.util.*
  * Author:lw
  * Date:2020/5/27 10:22
  */
-class ActivityStackManager{
+class ActivityStackManager private constructor(){
 
     private var activityStack = Stack<Activity>()
 
     companion object{
-        val instance = ActivityStackManager()
+        val instance = MySingle.mySingle
+    }
+
+    private object MySingle{
+        val mySingle = ActivityStackManager()
     }
 
     fun pushActivity(activity: Activity){
