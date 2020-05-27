@@ -1,1 +1,2 @@
 include ':activity_basic_use'
+include ':activity_launch_mode'
