@@ -22,9 +22,7 @@ abstract class BaseActivity : Activity() {
         printActivityStack()
     }
 
-    private fun printActivityStack() {
-
-
+    protected fun printActivityStack() {
         ActivityStackManager.instance.printStack()
     }
 }

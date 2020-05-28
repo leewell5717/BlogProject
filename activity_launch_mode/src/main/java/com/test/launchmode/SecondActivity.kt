@@ -17,15 +17,16 @@ class SecondActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        button = findViewById(R.id.back)
+        button = findViewById(R.id.secondBtn)
         button?.setOnClickListener {
-            val intent = Intent(this,SecondActivity::class.java)
+            val intent = Intent(this,ThirdActivity::class.java)
             startActivity(intent)
         }
     }
 
     override fun onNewIntent(intent: Intent?) {
         super.onNewIntent(intent)
+        printActivityStack();
         println("SecondActivity----onNewIntent()方法被调用")
     }
 }
