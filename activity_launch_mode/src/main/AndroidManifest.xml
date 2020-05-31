@@ -15,7 +15,27 @@
             </intent-filter>
         </activity>
         <activity android:name=".SecondActivity" android:launchMode="singleInstance" android:taskAffinity=":hello"/>
-        <activity android:name=".ThirdActivity"/>
+        <activity android:name=".ThirdActivity" />
+
+        <activity android:name="com.test.launchmode.TargetActivity">
+            <intent-filter>
+                <action android:name="com.test.myAction"/>
+                <action android:name="com.test.target.myAction"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.test.myCategory"/>
+                <category android:name="com.test.target.myCategory"/>
+                <data android:mimeType="image/png"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.test.a"/>
+                <action android:name="com.test.b"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.test.c"/>
+                <category android:name="com.test.d"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

@@ -1,6 +1,7 @@
 package com.test.launchmode
 
 import android.content.Intent
+import android.content.IntentFilter
 import android.os.Bundle
 import android.widget.Button
 
@@ -21,6 +22,7 @@ class ThirdActivity : BaseActivity() {
         btn?.setOnClickListener {
             val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
+
         }
     }
 }
