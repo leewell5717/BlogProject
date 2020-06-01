@@ -8,5 +8,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="这是mainActivity"/>
+        android:text="跳转到secondActivity"/>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="隐式启动Activity"/>
 </LinearLayout>
