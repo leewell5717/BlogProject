@@ -16,6 +16,7 @@
             </intent-filter>
         </activity>
         <service android:name=".service.ServiceOne"/>
+        <service android:name=".service.ServiceTwo"/>
     </application>
 
 </manifest>

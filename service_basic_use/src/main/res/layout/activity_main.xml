@@ -10,9 +10,21 @@
         android:textAllCaps="false"
         android:text="start_service"/>
     <Button
+        android:id="@+id/stop_service_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="stop_service"/>
+    <Button
         android:id="@+id/bind_service_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="bind_service"/>
+    <Button
+        android:id="@+id/unbind_service_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="unbind_service"/>
 </LinearLayout>

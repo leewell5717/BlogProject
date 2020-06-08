@@ -6,22 +6,21 @@ import android.os.IBinder
 import java.util.*
 import kotlin.concurrent.timerTask
 
-class ServiceOne : Service(){
+class ServiceTwo : Service(){
 
-    private var timer:Timer = Timer()
-    private var timerTask:TimerTask? = null
+    private var timer: Timer = Timer()
+    private var timerTask: TimerTask? = null
     private var count = 0
 
     override fun onCreate() {
         super.onCreate()
-        println("ServiceOne-->onCreate")
-
+        println("ServiceTwo-->onCreate")
 
         timerTask = timerTask {
             count++
             println(count)
-            if(count > 5){
-                println("counr超过了5，停止自己")
+            if(count > 10){
+                println("counr超过了10，停止自己")
                 stopSelf()
             }
         }
@@ -29,22 +28,22 @@ class ServiceOne : Service(){
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        println("ServiceOne-->onStartCommand")
+        println("ServiceTwo-->onStartCommand")
         return super.onStartCommand(intent, flags, startId)
     }
 
     override fun onBind(intent: Intent?): IBinder? {
-        println("ServiceOne-->onBind")
+        println("ServiceTwo-->onBind")
         return null
     }
 
     override fun onUnbind(intent: Intent?): Boolean {
-        println("ServiceOne-->onUnbind")
+        println("ServiceTwo-->onUnbind")
         return super.onUnbind(intent)
     }
 
     override fun onDestroy() {
-        println("ServiceOne-->onDestroy")
+        println("ServiceTwo-->onDestroy")
         super.onDestroy()
         timer.cancel()
     }
