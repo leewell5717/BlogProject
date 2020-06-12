@@ -4,9 +4,9 @@ import android.app.Service
 import android.content.ComponentName
 import android.content.Intent
 import android.content.ServiceConnection
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.IBinder
+import android.support.v7.app.AppCompatActivity
 import android.widget.Button
 import com.test.service.use.service.ServiceOne
 import com.test.service.use.service.ServiceTwo
@@ -17,19 +17,24 @@ class MainActivity : AppCompatActivity() {
     private var stopServiceBtn: Button? = null
     private var bindServiceBtn: Button? = null
     private var unBindServiceBtn: Button? = null
+    private var turnToSecond: Button? = null
 
     private var intentOne: Intent? = null
     private var intentTwo: Intent? = null
+    private var intentSecond: Intent? = null
 
-    private var connect = object : ServiceConnection {
+    private var connectTwo = object : ServiceConnection {
         override fun onServiceDisconnected(name: ComponentName?) {
-            println("onServiceDisconnected")
+            println("connectTwo-->onServiceDisconnected")
         }
 
-        override fun onServiceConnected(name: ComponentName?, service: IBinder?) {
-            println("onServiceConnected")
+        override fun onServiceConnected(name: ComponentName?, binder: IBinder?) {
+            println("connectTwo-->onServiceConnected")
+            binder as ServiceTwo.MyBinder
+            binder.getMessage("hello world")
+            binder.getAddition(3,2)
+            binder.getSubtraction(3,2)
         }
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,6 +49,8 @@ class MainActivity : AppCompatActivity() {
         stopServiceBtn = findViewById(R.id.stop_service_btn)
         bindServiceBtn = findViewById(R.id.bind_service_btn)
         unBindServiceBtn = findViewById(R.id.unbind_service_btn)
+        turnToSecond = findViewById(R.id.turn_to_second)
+
         startServiceBtn?.setOnClickListener {
             startService(intentOne)
         }
@@ -51,16 +58,20 @@ class MainActivity : AppCompatActivity() {
             stopService(intentOne)
         }
         bindServiceBtn?.setOnClickListener {
-            bindService(intentTwo, connect, Service.BIND_AUTO_CREATE)
+            bindService(intentTwo, connectTwo, Service.BIND_AUTO_CREATE)
         }
         unBindServiceBtn?.setOnClickListener {
-            unbindService(connect)
+            unbindService(connectTwo)
+        }
+        turnToSecond?.setOnClickListener {
+            startActivity(intentSecond)
         }
     }
 
     private fun initData() {
         intentOne = Intent(this, ServiceOne::class.java)
         intentTwo = Intent(this, ServiceTwo::class.java)
+        intentSecond = Intent(this, SecondActivity::class.java)
     }
 
     override fun onDestroy() {

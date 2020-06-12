@@ -7,7 +7,7 @@ import android.os.IBinder
 
 class ServiceTwo : Service() {
 
-    var myBinder = MyBinder()
+    private var myBinder = MyBinder()
 
     override fun onCreate() {
         super.onCreate()
@@ -37,7 +37,7 @@ class ServiceTwo : Service() {
 
     class MyBinder : Binder() {
         fun getMessage(msg: String) = println("输入的消息是：$msg")
-        fun getAddition(a: Int, b: Int) = println("$a + $b 的值是${a + b}")
-        fun getSubtraction(a: Int, b: Int) = println("$a - $b 的值是${a - b}")
+        fun getAddition(a: Int, b: Int) = println("$a + $b = ${a + b}")
+        fun getSubtraction(a: Int, b: Int) = println("$a - $b = ${a - b}")
     }
 }

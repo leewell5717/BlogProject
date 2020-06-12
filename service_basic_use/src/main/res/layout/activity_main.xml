@@ -19,6 +19,7 @@
         android:id="@+id/bind_service_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:textAllCaps="false"
         android:text="bind_service"/>
     <Button
@@ -27,4 +28,11 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="unbind_service"/>
+    <Button
+        android:id="@+id/turn_to_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textAllCaps="false"
+        android:text="跳转到SecondActivity"/>
 </LinearLayout>

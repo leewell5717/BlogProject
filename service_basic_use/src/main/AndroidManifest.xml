@@ -15,8 +15,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SecondActivity"/>
         <service android:name=".service.ServiceOne"/>
         <service android:name=".service.ServiceTwo"/>
+        <service android:name=".service.ServiceThree"/>
     </application>
 
 </manifest>

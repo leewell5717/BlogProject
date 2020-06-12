@@ -1,2 +1,3 @@
 include ':activity_basic_use'
 include ':activity_launch_mode'
+include ':service_basic_use'
