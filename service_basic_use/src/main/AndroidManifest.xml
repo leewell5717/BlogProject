@@ -19,6 +19,7 @@
         <service android:name=".service.ServiceOne" android:label="ServiceOne"/>
         <service android:name=".service.ServiceTwo" android:label="ServiceTwo"/>
         <service android:name=".service.ServiceThree" android:label="ServiceThree"/>
+        <service android:name=".service.MyIntentService" android:label="MyIntentService"/>
     </application>
 
 </manifest>

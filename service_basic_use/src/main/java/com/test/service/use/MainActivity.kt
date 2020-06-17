@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.os.IBinder
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
+import com.test.service.use.service.MyIntentService
 import com.test.service.use.service.ServiceOne
 import com.test.service.use.service.ServiceTwo
 
@@ -18,10 +19,12 @@ class MainActivity : AppCompatActivity() {
     private var bindServiceBtn: Button? = null
     private var unBindServiceBtn: Button? = null
     private var turnToSecond: Button? = null
+    private var intentServiceUseBtn: Button? = null
 
     private var intentOne: Intent? = null
     private var intentTwo: Intent? = null
     private var intentSecond: Intent? = null
+    private var intentService: Intent? = null
 
     private var connectTwo = object : ServiceConnection {
         override fun onServiceDisconnected(name: ComponentName?) {
@@ -50,6 +53,7 @@ class MainActivity : AppCompatActivity() {
         bindServiceBtn = findViewById(R.id.bind_service_btn)
         unBindServiceBtn = findViewById(R.id.unbind_service_btn)
         turnToSecond = findViewById(R.id.turn_to_second)
+        intentServiceUseBtn = findViewById(R.id.intent_service_use)
 
         startServiceBtn?.setOnClickListener {
             startService(intentOne)
@@ -66,12 +70,21 @@ class MainActivity : AppCompatActivity() {
         turnToSecond?.setOnClickListener {
             startActivity(intentSecond)
         }
+        intentServiceUseBtn?.setOnClickListener {
+            intentService?.putExtra("name","hello")
+            startService(intentService)
+            intentService?.putExtra("name","world")
+            startService(intentService)
+            intentService?.putExtra("name","xxx")
+            startService(intentService)
+        }
     }
 
     private fun initData() {
         intentOne = Intent(this, ServiceOne::class.java)
         intentTwo = Intent(this, ServiceTwo::class.java)
         intentSecond = Intent(this, SecondActivity::class.java)
+        intentService = Intent(this, MyIntentService::class.java)
     }
 
     override fun onDestroy() {
