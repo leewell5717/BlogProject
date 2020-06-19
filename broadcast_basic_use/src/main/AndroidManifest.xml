@@ -17,8 +17,13 @@
         </activity>
 
         <receiver android:name="com.test.broadcast.use.MyStaticBroadcastReceiver">
-            <intent-filter>
-                <action android:name="com.test.broadcast.use.hello"/>
+            <intent-filter android:priority="102">
+                <action android:name="com.test.broadcast.use.helloworld"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.test.broadcast.use.SecondBroadcastReceiver">
+            <intent-filter android:priority="100">
+                <action android:name="com.test.broadcast.use.helloworld"/>
             </intent-filter>
         </receiver>
     </application>
