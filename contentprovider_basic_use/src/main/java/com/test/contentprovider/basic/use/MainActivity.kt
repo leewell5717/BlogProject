@@ -47,10 +47,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         modifyBtn?.setOnClickListener(this)
         deleteBtn?.setOnClickListener(this)
 
-        contentResolver = MyContentProvider()
-
         requestPermission()
 
+        contentResolver = MyContentProvider()
         myUri = Uri.parse("content://com.test.contentprovider.basic.use.MyContentProvider/${MyDbOpenHelper.DB_TABLE_BOOK}")
     }
 

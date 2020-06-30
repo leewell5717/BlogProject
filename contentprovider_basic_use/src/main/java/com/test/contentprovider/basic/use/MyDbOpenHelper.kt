@@ -17,7 +17,7 @@ class MyDbOpenHelper(context: Context):SQLiteOpenHelper(context, DB_NAME, null, 
 
     override fun onCreate(db: SQLiteDatabase?) {
         db?.execSQL("CREATE TABLE IF NOT EXISTS $DB_TABLE_BOOK ( id integer primary key autoincrement,name varchar(30),price double ) ")
-        println("创建数据库成功")
+        println("创建表成功")
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {

@@ -79,6 +79,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         val priceInput = bookPriceEt?.text.toString()
         when (v) {
             insertBtn -> {
+                println("插入数据到三方应用")
                 if (TextUtils.isEmpty(nameInput)) {
                     showToast("请输入名称")
                     return
@@ -104,6 +105,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 cursor?.close()
             }
             queryBtn -> {
+                println("查询三方应用的数据")
                 val queryCursor: Cursor? = if (TextUtils.isEmpty(nameInput) && TextUtils.isEmpty(priceInput)) {
                     //查询全部数据
                     contentResolver.query(myUri, null, null, null, null)
@@ -131,6 +133,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 }
             }
             modifyBtn -> {
+                println("修改三方应用的数据")
                 if (TextUtils.isEmpty(nameInput)) {
                     showToast("请输入名称")
                     return
@@ -159,6 +162,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 }
             }
             deleteBtn -> {
+                println("删除三方应用的数据")
                 val deleteCount: Int
                 val deleteMsg = if (TextUtils.isEmpty(nameInput) && TextUtils.isEmpty(priceInput)) {
                     deleteCount = contentResolver.delete(myUri, null, null)
