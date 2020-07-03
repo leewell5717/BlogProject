@@ -73,7 +73,7 @@
         android:id="@+id/kotlinSingletonThreeBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/kotlinSingletonOneBtn"
+        android:layout_below="@id/kotlinSingletonTwoBtn"
         android:layout_alignParentRight="true"
         android:textAllCaps="false"
         android:text="kotlin单例-枚举"/>

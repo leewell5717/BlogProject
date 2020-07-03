@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".singleton_mode.SingletonModeActivity"/>
+        <activity android:name=".builder_mode.BuilderModeActivity"/>
     </application>
 
 </manifest>
