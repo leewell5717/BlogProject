@@ -17,5 +17,11 @@
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:text="Builder构造者模式"/>
+        <Button
+            android:id="@+id/prototypeModeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="原型模式"/>
     </LinearLayout>
 </ScrollView>

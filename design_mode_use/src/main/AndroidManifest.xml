@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".singleton_mode.SingletonModeActivity"/>
         <activity android:name=".builder_mode.BuilderModeActivity"/>
+        <activity android:name=".prototype_mode.PrototypeModeKotlinActivity"/>
+        <activity android:name=".prototype_mode.PrototypeModeJavaActivity"/>
     </application>
 
 </manifest>
