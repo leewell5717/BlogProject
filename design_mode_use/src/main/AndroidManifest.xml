@@ -20,6 +20,7 @@
         <activity android:name=".builder_mode.BuilderModeActivity"/>
         <activity android:name=".prototype_mode.PrototypeModeKotlinActivity"/>
         <activity android:name=".prototype_mode.PrototypeModeJavaActivity"/>
+        <activity android:name=".factory_method_mode.FactoryMethodModeActivity"/>
     </application>
 
 </manifest>
