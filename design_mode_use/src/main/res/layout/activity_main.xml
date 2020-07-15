@@ -6,6 +6,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#44aaff"
+            android:textColor="#fff"
+            android:padding="10dp"
+            android:text="创建型模式"/>
         <Button
             android:id="@+id/singletonModeBtn"
             android:layout_width="match_parent"
@@ -35,5 +42,26 @@
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:text="抽象工厂模式"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#8811aa"
+            android:textColor="#fff"
+            android:padding="10dp"
+            android:layout_marginTop="30dp"
+            android:text="行为型模式"/>
+        <Button
+            android:id="@+id/observerModeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="观察者模式"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#dd6611"
+            android:textColor="#fff"
+            android:padding="10dp"
+            android:layout_marginTop="30dp"
+            android:text="结构型模式"/>
     </LinearLayout>
 </ScrollView>

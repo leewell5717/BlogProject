@@ -10,6 +10,9 @@ import com.test.design.mode.use.abstract_factory_mode.factory.AbstractFactoryInt
 import com.test.design.mode.use.abstract_factory_mode.pad.PadInterface;
 import com.test.design.mode.use.abstract_factory_mode.phone.PhoneInterface;
 
+/**
+ * 抽象工厂模式
+ */
 public class AbstractFactoryActivity extends Activity {
 
     public static final String FactoryType1 = "FactoryType1";

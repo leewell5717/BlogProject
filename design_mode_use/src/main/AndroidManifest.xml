@@ -22,6 +22,7 @@
         <activity android:name=".prototype_mode.PrototypeModeJavaActivity"/>
         <activity android:name=".factory_method_mode.FactoryMethodModeActivity"/>
         <activity android:name=".abstract_factory_mode.AbstractFactoryActivity"/>
+        <activity android:name=".observer_mode.ObserverModeActivity"/>
     </application>
 
 </manifest>

@@ -8,6 +8,7 @@ import android.widget.Button
 import com.test.design.mode.use.abstract_factory_mode.AbstractFactoryActivity
 import com.test.design.mode.use.builder_mode.BuilderModeActivity
 import com.test.design.mode.use.factory_method_mode.FactoryMethodModeActivity
+import com.test.design.mode.use.observer_mode.ObserverModeActivity
 import com.test.design.mode.use.prototype_mode.PrototypeModeKotlinActivity
 import com.test.design.mode.use.singleton_mode.SingletonModeActivity
 
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     private var prototypeModeBtn : Button? = null
     private var factoryMethodModeBtn : Button? = null
     private var abstractFactoryModeBtn : Button? = null
+    private var observerModeBtn : Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +35,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         factoryMethodModeBtn?.setOnClickListener(this)
         abstractFactoryModeBtn = findViewById(R.id.abstractFactoryModeBtn)
         abstractFactoryModeBtn?.setOnClickListener(this)
+        observerModeBtn = findViewById(R.id.observerModeBtn)
+        observerModeBtn?.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -49,6 +53,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 Intent(this, FactoryMethodModeActivity::class.java)
             }abstractFactoryModeBtn -> {
                 Intent(this, AbstractFactoryActivity::class.java)
+            }observerModeBtn -> {
+                Intent(this, ObserverModeActivity::class.java)
             }else -> {
                 Intent(this, MainActivity::class.java)
             }
