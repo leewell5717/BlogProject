@@ -11,6 +11,7 @@ import com.test.design.mode.use.factory_method_mode.FactoryMethodModeActivity
 import com.test.design.mode.use.observer_mode.ObserverModeActivity
 import com.test.design.mode.use.prototype_mode.PrototypeModeKotlinActivity
 import com.test.design.mode.use.singleton_mode.SingletonModeActivity
+import com.test.design.mode.use.strategy_mode.StrategyModeActivity
 
 class MainActivity : AppCompatActivity(),View.OnClickListener {
 
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     private var factoryMethodModeBtn : Button? = null
     private var abstractFactoryModeBtn : Button? = null
     private var observerModeBtn : Button? = null
+    private var strategyModeBtn : Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +39,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         abstractFactoryModeBtn?.setOnClickListener(this)
         observerModeBtn = findViewById(R.id.observerModeBtn)
         observerModeBtn?.setOnClickListener(this)
+        strategyModeBtn = findViewById(R.id.strategyModeBtn)
+        strategyModeBtn?.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -55,6 +59,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 Intent(this, AbstractFactoryActivity::class.java)
             }observerModeBtn -> {
                 Intent(this, ObserverModeActivity::class.java)
+            }strategyModeBtn -> {
+                Intent(this, StrategyModeActivity::class.java)
             }else -> {
                 Intent(this, MainActivity::class.java)
             }

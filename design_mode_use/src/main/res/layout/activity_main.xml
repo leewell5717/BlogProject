@@ -55,6 +55,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="观察者模式"/>
+        <Button
+            android:id="@+id/strategyModeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="策略模式"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
