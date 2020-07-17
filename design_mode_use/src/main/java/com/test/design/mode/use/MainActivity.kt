@@ -13,6 +13,7 @@ import com.test.design.mode.use.observer_mode.ObserverModeActivity
 import com.test.design.mode.use.prototype_mode.PrototypeModeKotlinActivity
 import com.test.design.mode.use.singleton_mode.SingletonModeActivity
 import com.test.design.mode.use.strategy_mode.StrategyModeActivity
+import com.test.design.mode.use.template_method_mode.TemplateMethodMode
 
 class MainActivity : AppCompatActivity(),View.OnClickListener {
 
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     private var observerModeBtn : Button? = null
     private var strategyModeBtn : Button? = null
     private var chainOfResponsibilityModeBtn : Button? = null
+    private var templateMethodModeBtn : Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +47,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         strategyModeBtn?.setOnClickListener(this)
         chainOfResponsibilityModeBtn = findViewById(R.id.chainOfResponsibilityModeBtn)
         chainOfResponsibilityModeBtn?.setOnClickListener(this)
+        templateMethodModeBtn = findViewById(R.id.templateMethodModeBtn)
+        templateMethodModeBtn?.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -67,6 +71,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 Intent(this, StrategyModeActivity::class.java)
             }chainOfResponsibilityModeBtn -> {
                 Intent(this, ChainOfResponsibilityModeActivity::class.java)
+            }templateMethodModeBtn -> {
+                Intent(this, TemplateMethodMode::class.java)
             }else -> {
                 Intent(this, MainActivity::class.java)
             }
