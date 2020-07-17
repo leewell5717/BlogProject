@@ -24,6 +24,7 @@
         <activity android:name=".abstract_factory_mode.AbstractFactoryActivity"/>
         <activity android:name=".observer_mode.ObserverModeActivity"/>
         <activity android:name=".strategy_mode.StrategyModeActivity"/>
+        <activity android:name=".chain_of_responsibility_mode.ChainOfResponsibilityModeActivity"/>
     </application>
 
 </manifest>

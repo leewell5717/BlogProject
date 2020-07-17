@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import com.test.design.mode.use.abstract_factory_mode.AbstractFactoryActivity
 import com.test.design.mode.use.builder_mode.BuilderModeActivity
+import com.test.design.mode.use.chain_of_responsibility_mode.ChainOfResponsibilityModeActivity
 import com.test.design.mode.use.factory_method_mode.FactoryMethodModeActivity
 import com.test.design.mode.use.observer_mode.ObserverModeActivity
 import com.test.design.mode.use.prototype_mode.PrototypeModeKotlinActivity
@@ -22,6 +23,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     private var abstractFactoryModeBtn : Button? = null
     private var observerModeBtn : Button? = null
     private var strategyModeBtn : Button? = null
+    private var chainOfResponsibilityModeBtn : Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +43,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         observerModeBtn?.setOnClickListener(this)
         strategyModeBtn = findViewById(R.id.strategyModeBtn)
         strategyModeBtn?.setOnClickListener(this)
+        chainOfResponsibilityModeBtn = findViewById(R.id.chainOfResponsibilityModeBtn)
+        chainOfResponsibilityModeBtn?.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -61,6 +65,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 Intent(this, ObserverModeActivity::class.java)
             }strategyModeBtn -> {
                 Intent(this, StrategyModeActivity::class.java)
+            }chainOfResponsibilityModeBtn -> {
+                Intent(this, ChainOfResponsibilityModeActivity::class.java)
             }else -> {
                 Intent(this, MainActivity::class.java)
             }
