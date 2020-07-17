@@ -25,7 +25,8 @@
         <activity android:name=".observer_mode.ObserverModeActivity"/>
         <activity android:name=".strategy_mode.StrategyModeActivity"/>
         <activity android:name=".chain_of_responsibility_mode.ChainOfResponsibilityModeActivity"/>
-        <activity android:name=".template_method_mode.TemplateMethodMode"/>
+        <activity android:name=".template_method_mode.TemplateMethodModeActivity"/>
+        <activity android:name=".iterator_mode.IteratorModeActivity"/>
     </application>
 
 </manifest>

@@ -9,7 +9,7 @@ import com.test.design.mode.use.R;
 /**
  * Description: 模版方法模式
  */
-public class TemplateMethodMode extends Activity {
+public class TemplateMethodModeActivity extends Activity {
 
     private static final String TAG = "XXX";
 

@@ -9,11 +9,12 @@ import com.test.design.mode.use.abstract_factory_mode.AbstractFactoryActivity
 import com.test.design.mode.use.builder_mode.BuilderModeActivity
 import com.test.design.mode.use.chain_of_responsibility_mode.ChainOfResponsibilityModeActivity
 import com.test.design.mode.use.factory_method_mode.FactoryMethodModeActivity
+import com.test.design.mode.use.iterator_mode.IteratorModeActivity
 import com.test.design.mode.use.observer_mode.ObserverModeActivity
 import com.test.design.mode.use.prototype_mode.PrototypeModeKotlinActivity
 import com.test.design.mode.use.singleton_mode.SingletonModeActivity
 import com.test.design.mode.use.strategy_mode.StrategyModeActivity
-import com.test.design.mode.use.template_method_mode.TemplateMethodMode
+import com.test.design.mode.use.template_method_mode.TemplateMethodModeActivity
 
 class MainActivity : AppCompatActivity(),View.OnClickListener {
 
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     private var strategyModeBtn : Button? = null
     private var chainOfResponsibilityModeBtn : Button? = null
     private var templateMethodModeBtn : Button? = null
+    private var iteratorMethodModeBtn : Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +51,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         chainOfResponsibilityModeBtn?.setOnClickListener(this)
         templateMethodModeBtn = findViewById(R.id.templateMethodModeBtn)
         templateMethodModeBtn?.setOnClickListener(this)
+        iteratorMethodModeBtn = findViewById(R.id.iteratorMethodModeBtn)
+        iteratorMethodModeBtn?.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -72,7 +76,9 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
             }chainOfResponsibilityModeBtn -> {
                 Intent(this, ChainOfResponsibilityModeActivity::class.java)
             }templateMethodModeBtn -> {
-                Intent(this, TemplateMethodMode::class.java)
+                Intent(this, TemplateMethodModeActivity::class.java)
+            }iteratorMethodModeBtn -> {
+                Intent(this, IteratorModeActivity::class.java)
             }else -> {
                 Intent(this, MainActivity::class.java)
             }
