@@ -8,6 +8,7 @@ import android.widget.Button
 import com.test.design.mode.use.abstract_factory_mode.AbstractFactoryActivity
 import com.test.design.mode.use.builder_mode.BuilderModeActivity
 import com.test.design.mode.use.chain_of_responsibility_mode.ChainOfResponsibilityModeActivity
+import com.test.design.mode.use.command_mode.CommandModeActivity
 import com.test.design.mode.use.factory_method_mode.FactoryMethodModeActivity
 import com.test.design.mode.use.iterator_mode.IteratorModeActivity
 import com.test.design.mode.use.observer_mode.ObserverModeActivity
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     private var chainOfResponsibilityModeBtn : Button? = null
     private var templateMethodModeBtn : Button? = null
     private var iteratorMethodModeBtn : Button? = null
+    private var commandModeBtn : Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,6 +55,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         templateMethodModeBtn?.setOnClickListener(this)
         iteratorMethodModeBtn = findViewById(R.id.iteratorMethodModeBtn)
         iteratorMethodModeBtn?.setOnClickListener(this)
+        commandModeBtn = findViewById(R.id.commandModeBtn)
+        commandModeBtn?.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -79,6 +83,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 Intent(this, TemplateMethodModeActivity::class.java)
             }iteratorMethodModeBtn -> {
                 Intent(this, IteratorModeActivity::class.java)
+            }commandModeBtn -> {
+                Intent(this, CommandModeActivity::class.java)
             }else -> {
                 Intent(this, MainActivity::class.java)
             }
