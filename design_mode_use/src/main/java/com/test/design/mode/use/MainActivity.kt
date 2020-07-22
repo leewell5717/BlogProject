@@ -14,6 +14,7 @@ import com.test.design.mode.use.iterator_mode.IteratorModeActivity
 import com.test.design.mode.use.observer_mode.ObserverModeActivity
 import com.test.design.mode.use.prototype_mode.PrototypeModeKotlinActivity
 import com.test.design.mode.use.singleton_mode.SingletonModeActivity
+import com.test.design.mode.use.state_mode.StateModeActivity
 import com.test.design.mode.use.strategy_mode.StrategyModeActivity
 import com.test.design.mode.use.template_method_mode.TemplateMethodModeActivity
 
@@ -30,6 +31,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     private var templateMethodModeBtn : Button? = null
     private var iteratorMethodModeBtn : Button? = null
     private var commandModeBtn : Button? = null
+    private var stateModeBtn : Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,6 +59,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         iteratorMethodModeBtn?.setOnClickListener(this)
         commandModeBtn = findViewById(R.id.commandModeBtn)
         commandModeBtn?.setOnClickListener(this)
+        stateModeBtn = findViewById(R.id.stateModeBtn)
+        stateModeBtn?.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -85,6 +89,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 Intent(this, IteratorModeActivity::class.java)
             }commandModeBtn -> {
                 Intent(this, CommandModeActivity::class.java)
+            }stateModeBtn -> {
+                Intent(this, StateModeActivity::class.java)
             }else -> {
                 Intent(this, MainActivity::class.java)
             }

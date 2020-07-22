@@ -28,6 +28,7 @@
         <activity android:name=".template_method_mode.TemplateMethodModeActivity"/>
         <activity android:name=".iterator_mode.IteratorModeActivity"/>
         <activity android:name=".command_mode.CommandModeActivity"/>
+        <activity android:name=".state_mode.StateModeActivity"/>
     </application>
 
 </manifest>
