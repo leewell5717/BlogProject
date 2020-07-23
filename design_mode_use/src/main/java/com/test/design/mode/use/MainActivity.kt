@@ -11,6 +11,7 @@ import com.test.design.mode.use.chain_of_responsibility_mode.ChainOfResponsibili
 import com.test.design.mode.use.command_mode.CommandModeActivity
 import com.test.design.mode.use.factory_method_mode.FactoryMethodModeActivity
 import com.test.design.mode.use.iterator_mode.IteratorModeActivity
+import com.test.design.mode.use.memorandum_mode.MemorandumModeActivity
 import com.test.design.mode.use.observer_mode.ObserverModeActivity
 import com.test.design.mode.use.prototype_mode.PrototypeModeKotlinActivity
 import com.test.design.mode.use.singleton_mode.SingletonModeActivity
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     private var iteratorMethodModeBtn : Button? = null
     private var commandModeBtn : Button? = null
     private var stateModeBtn : Button? = null
+    private var memorandumModeBtn : Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,6 +63,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         commandModeBtn?.setOnClickListener(this)
         stateModeBtn = findViewById(R.id.stateModeBtn)
         stateModeBtn?.setOnClickListener(this)
+        memorandumModeBtn = findViewById(R.id.memorandumModeBtn)
+        memorandumModeBtn?.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -91,6 +95,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 Intent(this, CommandModeActivity::class.java)
             }stateModeBtn -> {
                 Intent(this, StateModeActivity::class.java)
+            }memorandumModeBtn -> {
+                Intent(this, MemorandumModeActivity::class.java)
             }else -> {
                 Intent(this, MainActivity::class.java)
             }

@@ -29,6 +29,7 @@
         <activity android:name=".iterator_mode.IteratorModeActivity"/>
         <activity android:name=".command_mode.CommandModeActivity"/>
         <activity android:name=".state_mode.StateModeActivity"/>
+        <activity android:name=".memorandum_mode.MemorandumModeActivity"/>
     </application>
 
 </manifest>
