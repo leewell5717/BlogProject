@@ -18,6 +18,7 @@ import com.test.design.mode.use.singleton_mode.SingletonModeActivity
 import com.test.design.mode.use.state_mode.StateModeActivity
 import com.test.design.mode.use.strategy_mode.StrategyModeActivity
 import com.test.design.mode.use.template_method_mode.TemplateMethodModeActivity
+import com.test.design.mode.use.visitor_mode.VisitorModeActivity
 
 class MainActivity : AppCompatActivity(),View.OnClickListener {
 
@@ -34,6 +35,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     private var commandModeBtn : Button? = null
     private var stateModeBtn : Button? = null
     private var memorandumModeBtn : Button? = null
+    private var visitorModeBtn : Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,6 +67,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         stateModeBtn?.setOnClickListener(this)
         memorandumModeBtn = findViewById(R.id.memorandumModeBtn)
         memorandumModeBtn?.setOnClickListener(this)
+        visitorModeBtn = findViewById(R.id.visitorModeBtn)
+        visitorModeBtn?.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -97,6 +101,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 Intent(this, StateModeActivity::class.java)
             }memorandumModeBtn -> {
                 Intent(this, MemorandumModeActivity::class.java)
+            }visitorModeBtn -> {
+                Intent(this, VisitorModeActivity::class.java)
             }else -> {
                 Intent(this, MainActivity::class.java)
             }

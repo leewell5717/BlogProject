@@ -30,6 +30,7 @@
         <activity android:name=".command_mode.CommandModeActivity"/>
         <activity android:name=".state_mode.StateModeActivity"/>
         <activity android:name=".memorandum_mode.MemorandumModeActivity"/>
+        <activity android:name=".visitor_mode.VisitorModeActivity"/>
     </application>
 
 </manifest>
