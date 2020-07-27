@@ -31,6 +31,7 @@
         <activity android:name=".state_mode.StateModeActivity"/>
         <activity android:name=".memorandum_mode.MemorandumModeActivity"/>
         <activity android:name=".visitor_mode.VisitorModeActivity"/>
+        <activity android:name=".mediator_mode.MediatorModeActivity"/>
     </application>
 
 </manifest>

@@ -95,6 +95,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="访问者模式"/>
+        <Button
+            android:id="@+id/mediatorModeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="中介者模式"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -11,6 +11,7 @@ import com.test.design.mode.use.chain_of_responsibility_mode.ChainOfResponsibili
 import com.test.design.mode.use.command_mode.CommandModeActivity
 import com.test.design.mode.use.factory_method_mode.FactoryMethodModeActivity
 import com.test.design.mode.use.iterator_mode.IteratorModeActivity
+import com.test.design.mode.use.mediator_mode.MediatorModeActivity
 import com.test.design.mode.use.memorandum_mode.MemorandumModeActivity
 import com.test.design.mode.use.observer_mode.ObserverModeActivity
 import com.test.design.mode.use.prototype_mode.PrototypeModeKotlinActivity
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     private var stateModeBtn : Button? = null
     private var memorandumModeBtn : Button? = null
     private var visitorModeBtn : Button? = null
+    private var mediatorModeBtn : Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,6 +71,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         memorandumModeBtn?.setOnClickListener(this)
         visitorModeBtn = findViewById(R.id.visitorModeBtn)
         visitorModeBtn?.setOnClickListener(this)
+        mediatorModeBtn = findViewById(R.id.mediatorModeBtn)
+        mediatorModeBtn?.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -103,6 +107,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 Intent(this, MemorandumModeActivity::class.java)
             }visitorModeBtn -> {
                 Intent(this, VisitorModeActivity::class.java)
+            }mediatorModeBtn -> {
+                Intent(this, MediatorModeActivity::class.java)
             }else -> {
                 Intent(this, MainActivity::class.java)
             }
