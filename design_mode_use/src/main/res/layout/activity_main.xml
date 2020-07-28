@@ -113,5 +113,10 @@
             android:padding="10dp"
             android:layout_marginTop="30dp"
             android:text="结构型模式"/>
+        <Button
+            android:id="@+id/proxyModeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="代理模式"/>
     </LinearLayout>
 </ScrollView>

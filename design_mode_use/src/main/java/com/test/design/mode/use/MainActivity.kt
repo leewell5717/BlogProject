@@ -16,6 +16,7 @@ import com.test.design.mode.use.mediator_mode.MediatorModeActivity
 import com.test.design.mode.use.memorandum_mode.MemorandumModeActivity
 import com.test.design.mode.use.observer_mode.ObserverModeActivity
 import com.test.design.mode.use.prototype_mode.PrototypeModeKotlinActivity
+import com.test.design.mode.use.proxy_mode.ProxyModeActivity
 import com.test.design.mode.use.singleton_mode.SingletonModeActivity
 import com.test.design.mode.use.state_mode.StateModeActivity
 import com.test.design.mode.use.strategy_mode.StrategyModeActivity
@@ -40,6 +41,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     private var visitorModeBtn : Button? = null
     private var mediatorModeBtn : Button? = null
     private var interpreterModeBtn : Button? = null
+    private var proxyModeBtn : Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -77,6 +79,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         mediatorModeBtn?.setOnClickListener(this)
         interpreterModeBtn = findViewById(R.id.interpreterModeBtn)
         interpreterModeBtn?.setOnClickListener(this)
+        proxyModeBtn = findViewById(R.id.proxyModeBtn)
+        proxyModeBtn?.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -115,6 +119,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 Intent(this, MediatorModeActivity::class.java)
             }interpreterModeBtn -> {
                 Intent(this, InterpreterModeActivity::class.java)
+            }proxyModeBtn -> {
+                Intent(this, ProxyModeActivity::class.java)
             }else -> {
                 Intent(this, MainActivity::class.java)
             }

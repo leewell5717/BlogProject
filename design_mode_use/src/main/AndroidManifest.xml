@@ -33,6 +33,7 @@
         <activity android:name=".visitor_mode.VisitorModeActivity"/>
         <activity android:name=".mediator_mode.MediatorModeActivity"/>
         <activity android:name=".interpreter_mode.InterpreterModeActivity"/>
+        <activity android:name=".proxy_mode.ProxyModeActivity"/>
     </application>
 
 </manifest>
