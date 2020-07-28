@@ -100,6 +100,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="中介者模式"/>
+        <Button
+            android:id="@+id/interpreterModeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="解释器模式"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

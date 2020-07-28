@@ -32,6 +32,7 @@
         <activity android:name=".memorandum_mode.MemorandumModeActivity"/>
         <activity android:name=".visitor_mode.VisitorModeActivity"/>
         <activity android:name=".mediator_mode.MediatorModeActivity"/>
+        <activity android:name=".interpreter_mode.InterpreterModeActivity"/>
     </application>
 
 </manifest>
