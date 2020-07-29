@@ -118,5 +118,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="代理模式"/>
+        <Button
+            android:id="@+id/decoratorModeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="装饰器模式"/>
     </LinearLayout>
 </ScrollView>
