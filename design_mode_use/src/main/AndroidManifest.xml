@@ -35,6 +35,7 @@
         <activity android:name=".interpreter_mode.InterpreterModeActivity"/>
         <activity android:name=".proxy_mode.ProxyModeActivity"/>
         <activity android:name=".decorator_mode.DecoratorModeActivity"/>
+        <activity android:name=".adapter_mode.AdapterModeActivity"/>
     </application>
 
 </manifest>

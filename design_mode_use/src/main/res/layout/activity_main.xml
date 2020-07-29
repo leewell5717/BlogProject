@@ -123,5 +123,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="装饰器模式"/>
+        <Button
+            android:id="@+id/adapterModeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="适配器模式"/>
     </LinearLayout>
 </ScrollView>

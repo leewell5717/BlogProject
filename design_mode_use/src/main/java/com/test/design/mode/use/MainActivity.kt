@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Button
 import com.test.design.mode.use.abstract_factory_mode.AbstractFactoryActivity
+import com.test.design.mode.use.adapter_mode.AdapterModeActivity
 import com.test.design.mode.use.builder_mode.BuilderModeActivity
 import com.test.design.mode.use.chain_of_responsibility_mode.ChainOfResponsibilityModeActivity
 import com.test.design.mode.use.command_mode.CommandModeActivity
@@ -44,6 +45,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     private var interpreterModeBtn : Button? = null
     private var proxyModeBtn : Button? = null
     private var decoratorModeBtn : Button? = null
+    private var adapterModeBtn : Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -85,6 +87,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         proxyModeBtn?.setOnClickListener(this)
         decoratorModeBtn = findViewById(R.id.decoratorModeBtn)
         decoratorModeBtn?.setOnClickListener(this)
+        adapterModeBtn = findViewById(R.id.adapterModeBtn)
+        adapterModeBtn?.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -127,6 +131,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 Intent(this, ProxyModeActivity::class.java)
             }decoratorModeBtn -> {
                 Intent(this, DecoratorModeActivity::class.java)
+            }adapterModeBtn -> {
+                Intent(this, AdapterModeActivity::class.java)
             }else -> {
                 Intent(this, MainActivity::class.java)
             }
