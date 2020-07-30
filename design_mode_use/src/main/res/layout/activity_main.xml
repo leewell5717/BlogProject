@@ -128,5 +128,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="适配器模式"/>
+        <Button
+            android:id="@+id/facadeModeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="外观模式"/>
     </LinearLayout>
 </ScrollView>

@@ -36,6 +36,7 @@
         <activity android:name=".proxy_mode.ProxyModeActivity"/>
         <activity android:name=".decorator_mode.DecoratorModeActivity"/>
         <activity android:name=".adapter_mode.AdapterModeActivity"/>
+        <activity android:name=".facade_mode.FacadeModeActivity"/>
     </application>
 
 </manifest>

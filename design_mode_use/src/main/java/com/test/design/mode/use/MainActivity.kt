@@ -11,6 +11,7 @@ import com.test.design.mode.use.builder_mode.BuilderModeActivity
 import com.test.design.mode.use.chain_of_responsibility_mode.ChainOfResponsibilityModeActivity
 import com.test.design.mode.use.command_mode.CommandModeActivity
 import com.test.design.mode.use.decorator_mode.DecoratorModeActivity
+import com.test.design.mode.use.facade_mode.FacadeModeActivity
 import com.test.design.mode.use.factory_method_mode.FactoryMethodModeActivity
 import com.test.design.mode.use.interpreter_mode.InterpreterModeActivity
 import com.test.design.mode.use.iterator_mode.IteratorModeActivity
@@ -46,6 +47,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     private var proxyModeBtn : Button? = null
     private var decoratorModeBtn : Button? = null
     private var adapterModeBtn : Button? = null
+    private var facadeModeBtn : Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -89,6 +91,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         decoratorModeBtn?.setOnClickListener(this)
         adapterModeBtn = findViewById(R.id.adapterModeBtn)
         adapterModeBtn?.setOnClickListener(this)
+        facadeModeBtn = findViewById(R.id.facadeModeBtn)
+        facadeModeBtn?.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -133,6 +137,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 Intent(this, DecoratorModeActivity::class.java)
             }adapterModeBtn -> {
                 Intent(this, AdapterModeActivity::class.java)
+            }facadeModeBtn -> {
+                Intent(this, FacadeModeActivity::class.java)
             }else -> {
                 Intent(this, MainActivity::class.java)
             }
