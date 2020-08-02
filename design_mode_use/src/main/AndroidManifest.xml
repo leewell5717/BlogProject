@@ -37,6 +37,7 @@
         <activity android:name=".decorator_mode.DecoratorModeActivity"/>
         <activity android:name=".adapter_mode.AdapterModeActivity"/>
         <activity android:name=".facade_mode.FacadeModeActivity"/>
+        <activity android:name=".flyweight_mode.FlyweightModeActivity"/>
     </application>
 
 </manifest>

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Button
+import com.test.design.mode.use.flyweight_mode.FlyweightModeActivity
 import com.test.design.mode.use.abstract_factory_mode.AbstractFactoryActivity
 import com.test.design.mode.use.adapter_mode.AdapterModeActivity
 import com.test.design.mode.use.builder_mode.BuilderModeActivity
@@ -48,6 +49,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     private var decoratorModeBtn : Button? = null
     private var adapterModeBtn : Button? = null
     private var facadeModeBtn : Button? = null
+    private var flyweightModeBtn : Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -93,6 +95,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         adapterModeBtn?.setOnClickListener(this)
         facadeModeBtn = findViewById(R.id.facadeModeBtn)
         facadeModeBtn?.setOnClickListener(this)
+        flyweightModeBtn = findViewById(R.id.flyweightModeBtn)
+        flyweightModeBtn?.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -139,6 +143,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 Intent(this, AdapterModeActivity::class.java)
             }facadeModeBtn -> {
                 Intent(this, FacadeModeActivity::class.java)
+            }flyweightModeBtn -> {
+                Intent(this, FlyweightModeActivity::class.java)
             }else -> {
                 Intent(this, MainActivity::class.java)
             }
