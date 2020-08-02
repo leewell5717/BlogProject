@@ -8,6 +8,7 @@ import android.widget.Button
 import com.test.design.mode.use.flyweight_mode.FlyweightModeActivity
 import com.test.design.mode.use.abstract_factory_mode.AbstractFactoryActivity
 import com.test.design.mode.use.adapter_mode.AdapterModeActivity
+import com.test.design.mode.use.bridge_mode.BridgeModeActivity
 import com.test.design.mode.use.builder_mode.BuilderModeActivity
 import com.test.design.mode.use.chain_of_responsibility_mode.ChainOfResponsibilityModeActivity
 import com.test.design.mode.use.command_mode.CommandModeActivity
@@ -50,6 +51,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     private var adapterModeBtn : Button? = null
     private var facadeModeBtn : Button? = null
     private var flyweightModeBtn : Button? = null
+    private var bridgeModeBtn : Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -97,6 +99,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         facadeModeBtn?.setOnClickListener(this)
         flyweightModeBtn = findViewById(R.id.flyweightModeBtn)
         flyweightModeBtn?.setOnClickListener(this)
+        bridgeModeBtn = findViewById(R.id.bridgeModeBtn)
+        bridgeModeBtn?.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -145,6 +149,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 Intent(this, FacadeModeActivity::class.java)
             }flyweightModeBtn -> {
                 Intent(this, FlyweightModeActivity::class.java)
+            }bridgeModeBtn -> {
+                Intent(this, BridgeModeActivity::class.java)
             }else -> {
                 Intent(this, MainActivity::class.java)
             }
